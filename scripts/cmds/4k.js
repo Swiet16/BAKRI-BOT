@@ -23,12 +23,12 @@ module.exports = {
         if (["photo", "sticker"].includes(replyAttachment?.type)) {
           return replyAttachment.url;
         } else {
-          throw new Error("┐⁠(⁠￣⁠ヘ⁠￣⁠)⁠┌ | Must reply to an image.");
+          throw new Error("oyee 😝😝| Must reply to an image.");
         }
       } else if (args[0]?.match(/(https?:\/\/.*\.(?:png|jpg|jpeg))/g) || null) {
         return args[0];
       } else {
-        throw new Error("(⁠┌⁠・⁠。⁠・⁠)⁠┌ | Reply to an image.");
+        throw new Error("😘😘 wait | Reply to an image.");
       }
     };
 
@@ -41,9 +41,9 @@ module.exports = {
       const response = await axios.get(`https://www.api.vyturex.com/upscale?imageUrl=${shortUrl}`);
       const resultUrl = response.data.resultUrl;
 
-      message.reply({ body: "<⁠(⁠￣⁠︶⁠￣⁠)⁠> | Image Enhanced.", attachment: await global.utils.getStreamFromURL(resultUrl) });
+      message.reply({ body: "😜😜😜🔥| Image Enhanced.", attachment: await global.utils.getStreamFromURL(resultUrl) });
     } catch (error) {
-      message.reply("┐⁠(⁠￣⁠ヘ⁠￣⁠)⁠┌ | Error: " + error.message);
+      message.reply("😒😒👈 | Error: " + error.message);
       // Log error for debugging: console.error(error);
     }
   }
